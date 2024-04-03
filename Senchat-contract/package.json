@@ -1,0 +1,25 @@
+{
+  "name": "smart-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "faithful1ofall <faithful1ofall@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "./node_modules/.bin/hardhat compile",
+    "node": "./node_modules/.bin/hardhat node",
+   "deploy:berachain": "./node_modules/.bin/hardhat run scripts/deploy.ts --network berachainTestnet",
+    "test": "./node_modules/.bin/hardhat test",
+    "verify": "./node_modules/.bin/hardhat verify --network berachainTestnet" 
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^1.0.0",
+    "dotenv": "^16.3.1",
+    "dotenv-cli": "^7.3.0",
+    "hardhat": "^2.19.1",
+    "typescript": "^5.0.4",
+    "viem": "^1.19.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}
