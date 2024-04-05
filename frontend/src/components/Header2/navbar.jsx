@@ -107,7 +107,7 @@ const Navbar = ({ children }) => {
               </NavLink>
               </li>
               <Text className="text-base " size="txtPromptBold16">
-                {userData ? userData.name : "Guest"} 
+                {userData ? `${userData.name.slice(0, 10)}...${userData.name.slice(-5)}` : "Guest"}
               </Text>
               <NavLink
                 className="flex items-center h-[35px] rounded-[50%] w-[35px]"

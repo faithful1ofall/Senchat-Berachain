@@ -41,7 +41,7 @@ const User = () => {
               className="ml-3 md:ml-[0] text-3xl sm:text-[26px] md:text-[28px] text-black-900"
               size="txtPromptMedium30Black900"
             >
-              {userData.name}
+              {`${userData.name.slice(0, 10)}...${userData.name.slice(-5)}`}
             </Text>
             <Text
               className="mb-0.5 ml-3 md:ml-[0] text-teal-100 text-xl"

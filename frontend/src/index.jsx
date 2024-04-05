@@ -6,7 +6,7 @@ import App from "./App";
 import "./styles/index.css";
 import "./styles/tailwind.css";
 import { ModalProvider } from '@particle-network/connect-react-ui';
-import { AvalancheTestnet } from '@particle-network/chains';
+import { BerachainArtio } from '@particle-network/chains';
 import { evmWallets } from '@particle-network/connect';
 
 ReactDOM.render(
@@ -18,10 +18,10 @@ ReactDOM.render(
                   clientKey: process.env.REACT_APP_CLIENTKEY,
                   appId: process.env.REACT_APP_APPID,
                   chains: [
-                    AvalancheTestnet
+                    BerachainArtio
                 ],
                 wallet: { 
-                  visible: false,
+                  visible: true,
               },
               wallets: evmWallets({ 
                     projectId: process.env.REACT_APP_PROJECTIDWALLET,
@@ -30,7 +30,10 @@ ReactDOM.render(
               }}
               theme={'dark'}
               language={'en'}
-              walletSort={['Wallet']}
+              walletSort={['Particle Auth', 'Wallet']}
+         /*      particleAuthSort={[    //optional：display particle auth items and order
+              'twitter',
+          ]} */
           >
               <App />
       </ModalProvider>
