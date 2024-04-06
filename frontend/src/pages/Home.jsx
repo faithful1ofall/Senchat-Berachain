@@ -150,7 +150,7 @@ const Home = () => {
           const signupData = {
             image,
             name: account.toString(),
-            description: `email: ${account.toString()}`,
+            description: `address: ${account.toString()}`,
             address: account,
           };
 
